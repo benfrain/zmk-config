@@ -32,12 +32,12 @@
         lower_layer {
             bindings = <
 
-    &kp F11              &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                                    &kp F6        &kp F7       &kp F8       &kp F9       &kp F10      &kp F12 
-    &trans             &BT_SEL 0  &BT_SEL 1 &BT_SEL 2  &BT_SEL 3  &BT_SEL 4                            &trans      &trans     &trans     &trans     &trans     &trans 
-    &trans             &trans  &trans  &trans  &trans &trans                                   &trans      &trans     &trans     &trans     &trans     &trans 
-    &trans             &trans  &trans  &trans  &trans  &trans                                  &trans      &trans     &trans     &trans     &kp BSLH     &trans 
-    &to 0              &trans  &trans  &trans &trans &trans                           &trans      &C_PP     &C_PREV    &C_VOL_DN     &C_VOL_UP     &C_NEXT 
-                                                                    &trans               &trans
+    &kp F11              	&kp F1    	&kp F2    	&kp F3    	&kp F4    	&kp F5                                    	&kp F6      &kp F7       	&kp F8       	&kp F9      &kp F10     &kp F12 
+    &trans             		&BT_SEL 0  	&BT_SEL 1 	&BT_SEL 2  	&BT_SEL 3  	&BT_SEL 4                            		&trans      &trans     		&trans     		&trans      &trans      &trans 
+    &trans             		&trans  	&trans  	&trans 		&trans 		&trans                                   	&trans      &trans     		&trans     		&trans      &trans      &trans 
+    &trans             		&trans  	&trans  	&trans  	&trans  	&trans                                  	&trans      &trans     		&trans     		&trans      &kp BSLH    &trans 
+    &to 0              		&trans  	&trans  	&trans 		&trans 		&trans                           			&trans      &C_PP     		&C_PREV    		&C_VOL_DN   &C_VOL_UP   &C_NEXT 
+                                                                    		&trans               						&trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
