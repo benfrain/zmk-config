@@ -36,7 +36,7 @@
     &trans             &BT_SEL 0  &BT_SEL 1 &BT_SEL 2  &BT_SEL 3  &BT_SEL 4                            &trans      &trans     &trans     &trans     &trans     &trans 
     &trans             &trans  &trans  &trans  &trans &trans                                   &trans      &trans     &trans     &trans     &trans     &trans 
     &trans             &trans  &trans  &trans  &trans  &trans                                  &trans      &trans     &trans     &trans     &kp BSLH     &trans 
-    TO(0)               &trans  &trans  &trans &trans &trans                           &trans      &C_PP     &C_PREV    &C_VOL_DN     &C_VOL_UP     &C_NEXT 
+    &to 0              &trans  &trans  &trans &trans &trans                           &trans      &C_PP     &C_PREV    &C_VOL_DN     &C_VOL_UP     &C_NEXT 
                                                                     &trans               &trans
             >;
 
