@@ -8,6 +8,21 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define AS(keycode) &as LS(keycode) keycode
+
+/ {
+        behaviors {
+            as: auto_shift {
+                compatible = "zmk,behavior-hold-tap";
+                label = "AUTO_SHIFT";
+                #binding-cells = <2>;
+                tapping_term_ms = <135>;
+                quick_tap_ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+            };
+        };
+
 &mt {
    tapping-term-ms = <200>;
 };
@@ -18,11 +33,11 @@
 
         default_layer {
             bindings = <
-&mt LC(LG(LS(LALT))) ESC  	&kp N1 		&kp N2   	&kp N3   	&kp N4    	&kp N5                      				&kp N6 		&kp N7    		&kp N8    		&kp N9   	&kp N0   	&kp LBKT
-&kp TAB   					&kp Q  		&kp W    	&kp F    	&kp P     	&kp B                       				&kp J  		&kp L     		&kp U     		&kp Y    	&kp SEMI 	&kp RBKT
-&kp DEL                     &kp A  		&kp R    	&kp S    	&kp T     	&kp G                       				&kp M  		&kp N     		&kp E     		&kp I    	&kp O 		&kp BSPC
-&mt LSHFT PG_UP 			&kp Z  		&kp X    	&kp C    	&kp D     	&kp V 					     				&kp K  		&kp H     		&kp COMMA 		&kp DOT  	&kp FSLH 	&mt RSHFT PG_DN
-&to 1 						&kp LCTRL 	&kp LALT 	&mt LCMD GRAVE	&kp SPACE   &kp MINUS 								&kp EQUAL  	&kp RET 		&kp LEFT  		&kp DOWN	&kp UP		&kp RIGHT
+&mt LC(LG(LS(LALT))) ESC  	AS(N1) 		AS(N2)   	AS(N3)   	AS(N4)    	AS(N5)                      				AS(N6) 		AS(N7)    		AS(N8)    		AS(N9)   	AS(N0)   	AS(LBKT)
+&kp TAB   					AS(Q)  		AS(W)    	AS(F)    	AS(P)     	AS(B)                       				AS(J)  		AS(L)     		AS(U)     		AS(Y)    	AS(SEMI) 	AS(RBKT)
+&kp DEL                     AS(A)  		AS(R)    	AS(S)    	AS(T)     	AS(G)                       				AS(M)  		AS(N)     		AS(E)     		AS(I)    	AS(O) 		AS(BSPC)
+&mt LSHFT PG_UP 			AS(Z)  		AS(X)    	AS(C)    	AS(D)     	AS(V) 					     				AS(K)  		AS(H)     		AS(COMMA) 		AS(DOT)  	AS(FSLH) 	&mt RSHFT PG_DN
+&to 1 						&kp LCTRL 	&kp LALT 	&mt LCMD GRAVE	&kp SPACE   &mt LG(MINUS) MINUS 		&mt LG(EQUAL) EQUAL  	&kp RET 		&kp LEFT  		&kp DOWN	&kp UP		&kp RIGHT
 																			&kp SQT								&kp DQT
             >;
 
