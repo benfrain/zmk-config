@@ -8,13 +8,6 @@ if SHIELD_DACTYL_LEFT
 
 endif
 
-if SHIELD_DACTYL_RIGHT
-
-    config ZMK_KEYBOARD_NAME
-        default "DM-BF(Right)"
-
-endif
-
 if SHIELD_DACTYL_LEFT || SHIELD_DACTYL_RIGHT
 
     config ZMK_SPLIT
