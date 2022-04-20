@@ -4,5 +4,8 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
         default y
 
-config ZMK_SPLIT
+if SHIELD_DACTYL_LEFT || SHIELD_DACTYL_RIGHT
+
+    config ZMK_SPLIT
+
         default y
