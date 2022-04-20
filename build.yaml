@@ -21,3 +21,4 @@ include:
       shield: dactyl_left
     - board: nice_nano_v2
       shield: dactyl_right
+      shield: settings_reset
