@@ -1,16 +1,11 @@
-if SHIELD_DACTYL_LEFT
+config ZMK_KEYBOARD_NAME
+        default "DM-BF"
 
-    config ZMK_KEYBOARD_NAME
-        default "DM-BF(Left)"
-
-    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
         default y
-
-endif
 
 if SHIELD_DACTYL_LEFT || SHIELD_DACTYL_RIGHT
 
     config ZMK_SPLIT
-        default y
 
-endif
+        default y
