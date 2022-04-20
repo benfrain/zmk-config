@@ -10,6 +10,10 @@
 
 #define AS(keycode) &as LS(keycode) keycode
 
+&mt {
+   tapping-term-ms = <200>;
+};
+
 / {
         behaviors {
             as: auto_shift {
@@ -22,12 +26,6 @@
                 bindings = <&kp>, <&kp>;
             };
         };
-
-&mt {
-   tapping-term-ms = <200>;
-};
-
-/ {
     keymap {
         compatible = "zmk,keymap";
 
