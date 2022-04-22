@@ -20,7 +20,7 @@
                 compatible = "zmk,behavior-hold-tap";
                 label = "AUTO_SHIFT";
                 #binding-cells = <2>;
-                tapping_term_ms = <250>;
+                tapping_term_ms = <200>;
                 quick_tap_ms = <0>;
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
@@ -46,11 +46,11 @@
             bindings = <
 
     &kp F11              	&kp F1    	&kp F2    	&kp F3    	&kp F4    	&kp F5                                    	&kp F6      &kp F7       	&kp F8       	&kp F9      &kp F10     &kp F12 
-    &trans   &bt BT_SEL 0  	&bt BT_SEL 1 	&bt BT_SEL 2  	&bt BT_SEL 3  	&bt BT_SEL 4                            		&trans      &trans     		&trans     		&trans      &trans      &trans 
-    &trans             		&trans  	&trans  	&trans 		&kp TILDE 	&trans                                   	&trans      &trans     		&trans     		&trans      &trans      &trans 
-    &trans             		&trans  	&trans  	&trans  	&trans  	&trans                                  	&trans      &trans     		&trans     		&trans      &kp BSLH    &trans 
-    &to 0              		&trans  	&trans  	&trans 		&trans 		&trans                           			&trans      &kp C_PP     	&kp C_PREV    	&kp C_VOL_DN   &kp C_VOL_UP   &kp C_NEXT 
-                                                                    		&trans               						&trans
+    &none   &bt BT_SEL 0  	&bt BT_SEL 1 	&bt BT_SEL 2  	&bt BT_SEL 3  	&bt BT_SEL 4                            	&none      &none     		&none     		&none       &none      &none 
+    &none             		&none  	    &none  	    &none 		&kp TILDE 	&none                                   	&none      &none     		&none     		&none       &none      &none 
+    &none             		&none  	    &none  	    &none  	    &none  	    &none                                  	    &none      &none     		&none     		&none       AS(BSLH)    &none 
+    &to 0              		&none  	    &none  	    &none 		&none 		&none                           			&none      &kp C_PP     	&kp C_PREV    	&kp C_VOL_DN   &kp C_VOL_UP   &kp C_NEXT 
+                                                                    		&none               						&none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
