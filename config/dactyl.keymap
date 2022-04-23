@@ -28,7 +28,6 @@
             ht: hold_tap{
                 compatible = "zmk,behavior-hold-tap";
                 label = "HOLD_TAP";
-                #binding-cells = <2>;
                 tapping-term-ms = <150>;
                 quick_tap_ms = <0>;
                 flavor = "tap-preferred";
@@ -37,16 +36,14 @@
             me: multi_equal {
                 compatible = "zmk,behavior-tap-dance";
                 label = "MULTI_EQUAL";
-                #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&kp EQUAL>, <&ht LG(EQUAL) LS(EQUAL)>;
+                bindings = <&ht LG(EQUAL) EQUAL>, <LS(EQUAL)>;
             };
             mm: multi_minus {
                 compatible = "zmk,behavior-tap-dance";
                 label = "MULTI_MINUS";
-                #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&kp MINUS>, <&ht LG(MINUS) LA(EQUAL)>;
+                bindings = <&ht LG(MINUS) MINUS>, <LS(MINUS)>;
             };
         };
     keymap {
