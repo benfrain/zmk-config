@@ -46,7 +46,7 @@
                 label = "MULTI_MINUS";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&ht LG(MINUS) MINUS>, <&kp LS(MINUS)>;
+                bindings = <&ht LG(MINUS) MINUS>, <&kp LA(LS(MINUS))>;
             };
         };
     keymap {
