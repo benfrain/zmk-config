@@ -25,6 +25,29 @@
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             };
+            ht: hold_tap{
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOLD_TAP";
+                #binding-cells = <2>;
+                tapping-term-ms = <150>;
+                quick_tap_ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+            };
+            me: multi_equal {
+                compatible = "zmk,behavior-tap-dance";
+                label = "MULTI_EQUAL";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp EQUAL>, <&ht LG(EQUAL) LS(EQUAL)>;
+            };
+            mm: multi_minus {
+                compatible = "zmk,behavior-tap-dance";
+                label = "MULTI_MINUS";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp MINUS>, <&ht LG(MINUS) LA(EQUAL)>;
+            };
         };
     keymap {
         compatible = "zmk,keymap";
@@ -35,7 +58,7 @@
 &kp TAB   					AS(Q)  		AS(W)    	AS(F)    	AS(P)     	AS(B)                       				AS(J)  		AS(L)     		AS(U)     		AS(Y)    	AS(SEMI) 	AS(RBKT)
 &kp DEL                     AS(A)  		AS(R)    	AS(S)    	AS(T)     	AS(G)                       				AS(M)  		AS(N)     		AS(E)     		AS(I)    	AS(O) 		AS(BSPC)
 &mt LSHFT PG_UP 			AS(Z)  		AS(X)    	AS(C)    	AS(D)     	AS(V) 					     				AS(K)  		AS(H)     		AS(COMMA) 		AS(DOT)  	AS(FSLH) 	&mt RSHFT PG_DN
-&to 1 						&kp LCTRL 	&kp LALT 	&mt LCMD GRAVE	&kp SPACE   &mt LG(MINUS) MINUS 		&mt LG(EQUAL) EQUAL  	&kp RET 		&kp LEFT  		&kp DOWN	&kp UP		&kp RIGHT
+&to 1 						&kp LCTRL 	&kp LALT 	&mt LCMD GRAVE	&kp SPACE   &mm 		                            &me  	&kp RET 		&kp LEFT  		&kp DOWN	&kp UP		&kp RIGHT
 																			&kp SQT								&kp DQT
             >;
 
