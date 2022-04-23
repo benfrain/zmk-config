@@ -39,14 +39,14 @@
                 label = "MULTI_EQUAL";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&ht LG(EQUAL) EQUAL>, &kp <LS(EQUAL)>;
+                bindings = <&ht LG(EQUAL) EQUAL>, <&kp LS(EQUAL)>;
             };
             mm: multi_minus {
                 compatible = "zmk,behavior-tap-dance";
                 label = "MULTI_MINUS";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&ht LG(MINUS) MINUS>, &kp <LS(MINUS)>;
+                bindings = <&ht LG(MINUS) MINUS>, <&kp LS(MINUS)>;
             };
         };
     keymap {
