@@ -58,8 +58,8 @@
 &kp TAB   					AS(Q)  		AS(W)    	AS(F)    	AS(P)     	AS(B)                       				AS(J)  		AS(L)     		AS(U)     		AS(Y)    	AS(SEMI) 	AS(RBKT)
 &kp DEL                     AS(A)  		AS(R)    	AS(S)    	AS(T)     	AS(G)                       				AS(M)  		AS(N)     		AS(E)     		AS(I)    	AS(O) 		AS(BSPC)
 &mt LSHFT PG_UP 			AS(Z)  		AS(X)    	AS(C)    	AS(D)     	AS(V) 					     				AS(K)  		AS(H)     		AS(COMMA) 		AS(DOT)  	AS(FSLH) 	&mt RSHFT PG_DN
-&to 1 						&mm 	    &me         &kp LCTRL	&kp SPACE   &kp LALT 		                            &mt LC(LS(LALT)) DQT  	&kp RET 		&kp LEFT  		&kp DOWN	&kp UP		&kp RIGHT
-																			&mt LCMD GRAVE								&mt RALT SQT
+&to 1 						&mm 	    &me         &kp LCTRL	&kp ALT   &mt LCMD GRAVE 		            &mt LC(LS(LALT)) DQT  	&mt RALT SQT    &kp LEFT  		&kp DOWN	&kp UP		&kp RIGHT
+																			&kp SPACE								 &kp RET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
